@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>電卓</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/calculator.js"></script>
+</head>
+<body>
+    <header>
+        <h1>電卓</h1>
+    </header>
+
+    <main>
+        <form  name="dentaku">
+            <table>
+                <!-- display  + [BackSpace]-->
+                <div #displays>
+                    <tr><td colspan="4"><input type="text" class="display" name="display" value="" disabled></td></tr>
+                    <tr>
+                        <td colspan="3"><input type="text" name="displayAns" value="" class="displayAns" disabled></td>
+                        <td><input type="button" value="AC" onclick="get_calc(this)" name="reset_btn"></td>
+                    </tr>
+                </div>
+                <!-- (, ), AC, mod -->
+                <tr>
+                    <td><input type="button" value="(" onclick="get_calc(this)" class="operator"></td>
+                    <td><input type="button" value=")" onclick="get_calc(this)" class="operator"></td>
+                    <td><input type="button" value="mod" onclick="get_calc(this)" class="operator" name="mod_btn"></td>
+                    <td><input type="button" value="delete" onclick="get_calc(this)" name="deleate_btn" class="delete operator"></td>
+                </tr>
+
+                <!-- 7, 8, 9, ÷ -->
+                <tr>
+                    <td><input type="button" value="7" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="8" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="9" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="÷" onclick="get_calc(this)" class="operator" name="div_btn"></td>
+                </tr>
+
+                <!-- 4, 5, 6, × -->
+                <tr>
+                    <td><input type="button" value="4" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="5" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="6" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="×" onclick="get_calc(this)" class="operator" name="add_btn"></td>
+                </tr>
+
+                <!-- 1, 2, 3, - -->
+                <tr>
+                    <td><input type="button" value="1" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="2" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="3" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="-" onclick="get_calc(this)" class="operator"></td>
+                </tr>
+
+                <!-- 0, ., =, + -->
+                <tr>
+                    <td><input type="button" value="0" onclick="get_calc(this)"></td>
+                    <td><input type="button" value="." onclick="get_calc(this)"></td>
+                    <td><input type="button" value="=" onclick="get_calc(this)" class="operator"></td>
+                    <td><input type="button" value="+" onclick="get_calc(this)" class="operator"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+        <p><small>2T5 17 川島未愛</small></p>
+    </footer>
+</body>
+</html>
